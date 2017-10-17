@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件</title>
+	<script src="../jquery-3.2.1/jquery-3.2.1.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		ul{
+			width: 125px;
+			height: 15px;
+			padding: 20px;
+			position: absolute;
+			top: 20px;
+			left: 20px;
+		}
+		ul>li{
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background: red;
+			float: left;
+			margin-right: 10px;
+			/* padding: 5px; */
+			font-size: 10px;
+			text-align: center;
+			line-height: 15px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script>
+		$(function(){
+			// console.log($('li').width(20));
+			// console.log($('li').height(20));
+			// console.log($('li').outerWidth(true));
+			$('li').hover(function(){
+				$(this).css('background','green')
+			},function(){
+				$(this).css('background','red')
+			})
+		})
+	</script>
+</body>
+</html>
